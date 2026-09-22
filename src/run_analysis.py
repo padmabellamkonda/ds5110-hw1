@@ -40,4 +40,10 @@ by_product.plot(kind="bar")
 plt.ylabel("Total revenue ($)")
 plt.title("Revenue by product")
 plt.savefig(OUTDIR/"revenue_by_product.png")
+daily.to_csv(OUTDIR / "daily_revenue.csv")
+with open(OUTDIR / "daily_revenue.csv", "a") as f:
+    f.write(f"Average daily revenue,{avg_daily:.2f}\n")
+    f.write(f"Group A mean revenue,{group_a['revenue'].mean():.2f}\n")
+    f.write(f"Group B mean revenue,{group_b['revenue'].mean():.2f}\n")
+
 #plt.show()
