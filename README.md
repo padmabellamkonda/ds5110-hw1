@@ -1,3 +1,7 @@
+## How to run
+
+    bash run.sh
+Results are written to `analysis/`.
 ## What was broken
 
 ### 1. 
