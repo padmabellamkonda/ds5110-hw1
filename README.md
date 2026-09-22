@@ -42,7 +42,15 @@ The CSV only existed locally on the author's computer, so a fresh clone of
 the project would have had no data to run on at all. I committed it to
 `data/raw/`. 
 
-## conclusion
+## Conclusion
 
 The notebook concluded that drip coffee brings in the most revenue. It
 doesn't, lattes do.
+
+## Use of generative AI
+
+What it was used for:
+- Explaining concepts I hadn't met before: virtual environments, random
+  seeds, `Path(__file__)` for anchoring paths, and what `matplotlib.use("Agg")`
+  does
+
