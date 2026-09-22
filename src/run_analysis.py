@@ -9,7 +9,7 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA = PROJECT_ROOT / "data" / "raw" / "coffee_sales.csv"
-OUTDIR = PROJECT_ROOT / "output"
+OUTDIR = PROJECT_ROOT / "analysis"
 OUTDIR.mkdir(exist_ok=True)
 
 df = pd.read_csv(DATA)
