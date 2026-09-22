@@ -1,7 +1,6 @@
 ## What was broken
 
-### 1. Hardcoded paths
-
+### 1. 
 The notebook read the CSV from an absolute path on the author's machine:
 
     df = pd.read_csv("/Users/jmwaura/Desktop/analysis/coffee_sales.csv")
@@ -14,7 +13,7 @@ I changed both to point inside the repo. In the final script the paths are
 built from the script's own location, so they work no matter which
 directory you run the command from.
 
-### 2. A cell that depended on run order
+### 2. 
 
 `avg_daily` was printed in a cell above the one that defines it. The author
 probably ran the lower cell first, then scrolled up and ran the print. that
@@ -23,8 +22,7 @@ but not on a fresh run. You normally run top to bottom, and top to bottom.
 
 I moved the daily revenue cell above the print.
 
-### 3. Randomness that wasn't seeded
-
+### 3.
 The 50/50 split used `df.sample(frac=1)` with no seed, so it picked
 different rows every run:
 
@@ -34,13 +32,13 @@ different rows every run:
 I added `random_state=30`, which makes it produce the same shuffle every
 time, so the numbers are repeatable.
 
-### 4. Data that was never committed
+### 4. 
 
 The CSV only existed locally on the author's computer, so a fresh clone of
 the project would have had no data to run on at all. I committed it to
 `data/raw/`. 
 
-## A note on the conclusion
+## conclusion
 
 The notebook concluded that drip coffee brings in the most revenue. It
 doesn't, lattes do.
